@@ -40,7 +40,7 @@ To submit your code to leaderboard, you will need to first fork this repo and cl
 git clone <Your forked repo>
 ```
 
-Now replace `112062892_hw2_*` files in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
+Now replace `112062892_hw2_test.py` and `112062892_hw2_data.py` in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
 
 - Python 3.7
 - tdqm
@@ -59,7 +59,6 @@ The change the name in `meta.xml` to your **STUDENT ID** for the submission. Not
       <name>CHANGE HERE INTO YOUR ID</name> 
    </info>
 </catalog>
-
 ```
 
 Once you are happy with above, commit & push them to your forked repo:
