@@ -49,3 +49,9 @@ git commit -m "submission"
 git push
 ```
 
+Pushing to the repo will trigger the following procedure:
+
+1. Creating virtual env & installing dependencies
+2. Check your submission
+3. Run your code and return a score if checking succeed
+4. Push the socre to the leaderboard
