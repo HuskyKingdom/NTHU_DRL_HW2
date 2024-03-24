@@ -34,6 +34,7 @@ total_reward = 0
 total_time = 0
 env = flappy_bird_gym.make("FlappyBird-rgb-v0")
 obs = env.reset()
+agent = Agent()
 
 for episode in tqdm(range(100), desc="Evaluating"):
     obs = env.reset()
@@ -41,7 +42,7 @@ for episode in tqdm(range(100), desc="Evaluating"):
     episode_reward = 0
     
     while True:
-        action = Agent.act(obs) 
+        action = agent.act(obs) 
 
         obs, reward, done, info = env.step(action)
         episode_reward += reward
