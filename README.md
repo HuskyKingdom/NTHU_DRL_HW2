@@ -1,8 +1,8 @@
 <br />
 <div align="center" id="readme-top">
   
-  <h1 align="center">Programming Homework 2</h1>
-  <h3 align="center">Deep Reinforcement Learning Class 2024 | National Tsing Hua University</h3>
+  <h1 align="center">Leaderboard Submission Guide</h1>
+  <h3 align="center">Deep Reinforcement Learning Class 2024 Programming Homework 2 | National Tsing Hua University</h3>
 
 Due: 2022/04/09 (Tue.) 23:59
 
@@ -24,68 +24,28 @@ Flappy Bird for OpenAI Gym ("<Student_ID>\_hw2_<train|test>.py"), please referri
 
 There are two types of environment in the package, the "FlappyBird-rgb-v0" environment, yields RGB-arrays (images) representing the game's screen. The "FlappyBird-v0" environment, on the other hand, yields simple numerical information about the game's state as observations. 
 
-In this assignment, you are required to use **FlappyBird-rgb-v0** environment.
+## Leaderboard Submission
 
-It is recommanded to use virtual environment like conda to manage your code base. Flappy Bird for OpenAI Gym supports a wide range of python versions (from 3.6-3.9), install `flappy-bird-gym` directly by:
+We provide leaderboard for you to compare with your classmate, the ranking of which will be a significant reference of your overall score base on the your relative ranking position.
 
-```
-pip install flappy-bird-gym
-```
-
-Note that if in case you encounter some error when installing gym==0.18 and thus failed to install flappy-bird-gym, try run the following first then install again:
+To submit your code to leaderboard, you will need to first fork this repo and clone it to your local environment:
 
 ```
-pip install setuptools==65.5.0 pip==21
-pip install wheel==0.38.0
+git clone <Your forked repo>
 ```
 
-### Environment Spaces
+Now replace `112062892_hw2_*` files in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
 
-**Action Space** - gym.spaces.Discrete(2) | (Zero `0` means "do nothing" and one `1` means "flap")
+- Python 3.8
+- flappy-bird-gym 
+- torch (CPU)
 
-**Observation Space** - gym.spaces.Box(0, 255, [288,512,3]) | Numpy array of shape `(288,512,3)`
+If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
 
-**Reward** - `reward = 1` for all timesteps.
+Once you are happy with it, commit & push them to your forked repo:
 
-### Programming Requirements
-
-1. Implement and train your agent in **FlappyBird-rgb-v0** environment.
-2. You are required to use DQN as your core algorithm, but other improvements are allowed (optional).
-3. You must write all your training and testing code by yourself.
-4. You may store your learned model in an external file “./<Student_ID>_hw2_data”, and access it with your program (during testing).
-5. You should implement a class called `Agent` with the member function `act(observation)` function in your testing code. See `random_agent.py` for an example.
-6. If your program outputs invalid moves, you lose and the game ends immediately.
-7. Time limit for each move is 1 second, and the memory limit is 4 GB. (Note that the 1-second duration may vary depending on different processors. If you use a DQN-based agent and it doesn’t perform additional calculations during inference, you don’t need to worry about the time limit.)
-8. You are allowed to use the following Python package:
-- numpy, scipy, gym, pandas, tensorflow, pytorch and the packages mentioned in the environment’s repo.
-- You are allowed to use Python default installed packages.
-(e.g., sys, time, pickle, random, etc.)
-- If you need to use other packages, state your reasons and post on hackmd.
-- You are not allowed to use any read-made RL algorithms like stablebaseline3.
-
-### Other Requirements
-
-Write a report to:
-
-1. Elaborate on how you design your agent. What advanced techniques of DQN do you use? The report is graded directly. So, make sure you have included enough details and figures to help TAs grade your report.
-
-2. TAs will not refer to your code when grading your report, so make sure you have taken a screenshot of the important code snippets.
-
-
-## Problem Submission
-
-For each problem, please use Python to implement with a single source file.
-
-Your files must be named as:
-- “<Student_ID>_hw2_train.py”
-- “<Student_ID>_hw2_test.py”
-- “<Student_ID>_hw2_data”
-- “<Student_ID>_hw2_report.pdf”
-
-and please make sure that all characters of the filename are in lower case. For example, if your student id is 110062579, the name of your program file should be 110062579_hw2_train.py and so on.
-
-0 points will be given to **Plagiarism**. NEVER SHOW YOUR CODE to others and you must write your code by yourself. If the codes are similar to other people and you can’t explain your code properly, you will be identified as plagiarism.
-
-0 points will be given if you violate the rules above.
-If you use modularized / OOP code and want to use multiple files to keep your code structured, please upload it along with the 3 files above.
+```
+git commit -m "submission"
+git push
+```
 
