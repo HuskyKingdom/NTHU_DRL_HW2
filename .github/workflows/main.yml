@@ -24,6 +24,5 @@ jobs:
       run: |
         python -m pip install --upgrade pip && pip install setuptools==65.5.0 pip==21  && pip install wheel==0.38.0 && pip install flappy-bird-gym 
         pip install -r requirements.txt
-        # 如果有依赖，可以在这一步使用 pip install 命令安装
     - name: 3. Check your submission
       run: python checker.py
