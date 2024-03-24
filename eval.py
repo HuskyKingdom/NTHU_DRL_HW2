@@ -1,6 +1,7 @@
 from xml.etree import ElementTree as ET
 import importlib.util
 import sys
+import os
 
 # retrive submission meta info
 xml_file_path = 'meta.xml'
@@ -21,6 +22,8 @@ module = importlib.util.module_from_spec(spec)
 sys.modules[module_name] = module
 spec.loader.exec_module(module)
 Agent = getattr(module, 'Agent')
+
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 # evaluating
 import time
