@@ -89,13 +89,3 @@ and please make sure that all characters of the filename are in lower case. For 
 0 points will be given if you violate the rules above.
 If you use modularized / OOP code and want to use multiple files to keep your code structured, please upload it along with the 3 files above.
 
-
-## Grading Policy
-
-1. The project accounts for 15 points (tentative) of your total grade.
-
-2. You must submit both your source code and report. Remember the submission rules mentioned
-above, or you will be punished on your grade. Late submission rules are specified in the Lecture
-1 Slides.
-
-3. 
