@@ -4,8 +4,21 @@ import sys
 import os
 import requests
 import argparse
-parser = argparse.ArgumentParser(description="Evaluation")
-args = parser.parse_args()
+
+def parse_arguments():
+    parser = argparse.ArgumentParser(description="Road Making System")
+
+    parser.add_argument(
+        "--token",
+        default="",
+        type=str,
+    )
+
+
+    return args
+
+
+args = parse_arguments()
 
 # retrive submission meta info
 xml_file_path = 'meta.xml'
