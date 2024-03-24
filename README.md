@@ -36,7 +36,8 @@ git clone <Your forked repo>
 
 Now replace `112062892_hw2_*` files in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
 
-- Python 3.8
+- Python 3.7
+- tdqm
 - flappy-bird-gym 
 - torch (CPU)
 

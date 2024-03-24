@@ -22,4 +22,35 @@ sys.modules[module_name] = module
 spec.loader.exec_module(module)
 Agent = getattr(module, 'Agent')
 
-print(Agent)
+# evaluating
+import time
+import flappy_bird_gym
+from tqdm import tqdm
+
+total_reward = 0
+total_time = 0
+env = flappy_bird_gym.make("FlappyBird-rgb-v0")
+obs = env.reset()
+
+for episode in tqdm(range(100), desc="Evaluating"):
+    obs = env.reset()
+    start_time = time.time()
+    episode_reward = 0
+    
+    while True:
+        action = Agent.act(obs) 
+
+        obs, reward, done, info = env.step(action)
+        episode_reward += reward
+
+        if done:
+            break
+
+    end_time = time.time()
+    total_reward += episode_reward
+    total_time += (end_time - start_time)
+
+env.close()
+
+score = total_reward / total_time
+print(f"Final Score: {score}")
