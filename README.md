@@ -74,3 +74,4 @@ Pushing to the repo will trigger the following procedure:
 This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below [Top left near "submission" in the pic.] then in the pop-up window clike "details", if the any of above workflow fails, you could view details in it.
 
 <img src="docs/example.png">
+<img src="docs/lb_example.png">
