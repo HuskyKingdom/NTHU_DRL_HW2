@@ -37,7 +37,7 @@ We provide a leaderboard for you to compare with your classmate, the ranking of 
 To submit your code to leaderboard, you will need to first fork this repo and clone it to your local environment:
 
 ```
-git clone <Your forked repo>
+git clone <Your forked repo> 
 ```
 
 Now replace `112062892_hw2_test.py` and `112062892_hw2_data.py` in the repo with your own version of them. The following packages were installed by default in repo cloud environment:
