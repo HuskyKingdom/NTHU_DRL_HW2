@@ -153,6 +153,7 @@ def main():
         
     print(f"\033[93mScore: {score}/20\033[0m")
     
+    print(torch.cuda.is_available())
  
           
 
