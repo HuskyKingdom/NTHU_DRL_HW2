@@ -2,6 +2,10 @@ from xml.etree import ElementTree as ET
 import importlib.util
 import sys
 import os
+import requests
+import argparse
+parser = argparse.ArgumentParser(description="Evaluation")
+args = parser.parse_args()
 
 # retrive submission meta info
 xml_file_path = 'meta.xml'
@@ -35,6 +39,7 @@ total_time = 0
 env = flappy_bird_gym.make("FlappyBird-rgb-v0")
 obs = env.reset()
 agent = Agent()
+time_limit = 120
 
 for episode in tqdm(range(100), desc="Evaluating"):
     obs = env.reset()
@@ -47,6 +52,10 @@ for episode in tqdm(range(100), desc="Evaluating"):
         obs, reward, done, info = env.step(action)
         episode_reward += reward
 
+        if time.time() - start_time > time_limit:
+            print(f"Time limit reached for episode {episode}")
+            break
+
         if done:
             break
 
@@ -58,3 +67,18 @@ env.close()
 
 score = total_reward / total_time
 print(f"Final Score: {score}")
+
+# push to leaderboard
+params = {
+    'act': 'add',
+    'name': 'Team9',
+    'score': '100.9',
+    'token': args.token
+}
+url = 'http://trunkroom.novalab-demo2.com/deep/action.php'
+
+response = requests.get(url, params=params)
+if response.ok:
+    print('Success:', response.text)
+else:
+    print('Error:', response.status_code)

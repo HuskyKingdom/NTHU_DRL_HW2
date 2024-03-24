@@ -38,6 +38,7 @@ Now replace `112062892_hw2_*` files in the repo with your own version of them. T
 
 - Python 3.7
 - tdqm
+- requests
 - flappy-bird-gym 
 - torch (CPU)
 
