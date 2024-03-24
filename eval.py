@@ -71,8 +71,8 @@ print(f"Final Score: {score}")
 # push to leaderboard
 params = {
     'act': 'add',
-    'name': 'Team9',
-    'score': '100.9',
+    'name': sub_name,
+    'score': str(score),
     'token': args.token
 }
 url = 'http://trunkroom.novalab-demo2.com/deep/action.php'
