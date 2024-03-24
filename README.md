@@ -26,6 +26,8 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 - Make sure to allow CPU mode in your test agent.
 
+- Make sure you pass checker.py checking before submitting to leaderboard.
+
 
 
 ## Leaderboard Submission

@@ -80,6 +80,7 @@ def check_agent(foldernames):
         return Agent
     except AttributeError as e:
         return None
+    
 
         
 def check_agent_act(Agent):
@@ -89,6 +90,16 @@ def check_agent_act(Agent):
         # cheking data form
         act_signature = inspect.signature(Agent.act)
         params = list(act_signature.parameters.keys())
+
+        act_signature = inspect.signature(Agent.__init__)
+        params_i = list(act_signature.parameters.keys())
+
+        if len(params_i) == 1 and params[0] == 'self':
+            print(f"\033[92mAgent Init Function Checking: PASS \033[0m")
+        else:
+            print(f"\033[91mAgent Init FUNCTION HAS WRONG PARAMETER LIST!\033[0m")
+            return False
+
         if len(params) == 2 and params[1] == 'observation':
             print(f"\033[92mAgent Act Function Checking: PASS +5\033[0m")
         else:
@@ -98,6 +109,7 @@ def check_agent_act(Agent):
         print(f"\033[91mAgent MISSING ACT FUNCTION!\033[0m")
         return False
 
+    
 
     return True
 
