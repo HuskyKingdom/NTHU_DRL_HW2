@@ -26,6 +26,6 @@ jobs:
         pip install -r requirements.txt
     - name: 3. Check your submission
       run: python checker.py
-    - name: 3. Running your code
+    - name: 4. Running your code
       run: python eval.py
 
