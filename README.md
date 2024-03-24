@@ -10,7 +10,9 @@ Due: 2022/04/09 (Tue.) 23:59
 
 
 
-[<img src="https://raw.githubusercontent.com/Talendar/flappy-bird-gym/main/imgs/blue_bird_playing.gif" height=450>]
+<img src="https://raw.githubusercontent.com/Talendar/flappy-bird-gym/main/imgs/blue_bird_playing.gif" height=450>
+
+Leaderboard Link: [www.google.com](www.google.com)
 
 </div>
 
@@ -18,15 +20,13 @@ Due: 2022/04/09 (Tue.) 23:59
 
 ## Problem Description
 
-### Overview & Installation
-
 Flappy Bird for OpenAI Gym ("<Student_ID>\_hw2_<train|test>.py"), please referring to [flappy_bird_gym](https://github.com/Talendar/flappy-bird-gym). This is a set of OpenAI Gym environments for the Flappy Bird game.
 
 There are two types of environment in the package, the "FlappyBird-rgb-v0" environment, yields RGB-arrays (images) representing the game's screen. The "FlappyBird-v0" environment, on the other hand, yields simple numerical information about the game's state as observations. 
 
 ## Leaderboard Submission
 
-We provide leaderboard for you to compare with your classmate, the ranking of which will be a significant reference of your overall score base on the your relative ranking position.
+We provide a leaderboard for you to compare with your classmate, the ranking of which will be a significant reference of your overall score based on your relative ranking position.  
 
 To submit your code to leaderboard, you will need to first fork this repo and clone it to your local environment:
 
@@ -51,9 +51,12 @@ git push
 
 Pushing to the repo will trigger the following procedure:
 
-1. Creating virtual env & installing dependencies
-2. Check your submission
-3. Run your code and return a score if checking succeed
-4. Push the socre to the leaderboard
+1. Creating virtual env
+2. installing dependencies
+3. Check your submission
+4. Run your code and return a score if checking succeed
+5. Push the socre to the leaderboard
 
-This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below, only in your case, it should be showing "submission" instead of "testing".
+This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below [Top left near "submission" in the pic.] then in the pop-up window clike "details", if the any of above workflow fails, you could view details in it.
+
+<img src="docs/example.png">
