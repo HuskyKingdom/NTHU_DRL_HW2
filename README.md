@@ -34,7 +34,9 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 We provide a leaderboard for you to compare with your classmate, the ranking of which will be a significant reference of your overall score based on your relative ranking position.  
 
-To submit your code to leaderboard, you will need to first fork this repo and clone it to your local environment:
+To submit your code to leaderboard, you will need to first **fork this repo**.
+
+Then clone it to your local environment:
 
 ```
 git clone <Your forked repo> 
