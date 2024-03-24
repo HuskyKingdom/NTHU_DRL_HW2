@@ -52,7 +52,7 @@ Now replace `112062892_hw2_test.py` and `112062892_hw2_data.py` in the repo with
 
 If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
 
-The change the name in `meta.xml` to your **STUDENT ID** for the submission. Note that if you submit to leaderboard multiple times when you improved the agent, simply use the same name and the result will be updated.
+Then change the name in `meta.xml` to your **STUDENT ID** for the submission. Note that if you submit to leaderboard multiple times when you improved the agent, simply use the same name and the result will be updated.
 
 ```
 <?xml version="1.0"?>
