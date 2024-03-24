@@ -14,7 +14,7 @@ def parse_arguments():
         type=str,
     )
 
-
+    args = parser.parse_args()
     return args
 
 
