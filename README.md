@@ -56,4 +56,4 @@ Pushing to the repo will trigger the following procedure:
 3. Run your code and return a score if checking succeed
 4. Push the socre to the leaderboard
 
-This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below, only in your case, it should be showing "submission" instead of "testing"
+This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below, only in your case, it should be showing "submission" instead of "testing".
