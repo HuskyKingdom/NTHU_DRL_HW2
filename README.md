@@ -42,7 +42,19 @@ Now replace `112062892_hw2_*` files in the repo with your own version of them. T
 
 If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
 
-Once you are happy with it, commit & push them to your forked repo:
+The change the name in `meta.xml` to your **STUDENT ID** for the submission. Note that if you submit to leaderboard multiple times when you improved the agent, simply use the same name and the result will be updated.
+
+```
+<?xml version="1.0"?>
+<catalog>
+   <info>
+      <name>CHANGE HERE INTO YOUR ID</name> 
+   </info>
+</catalog>
+
+```
+
+Once you are happy with above, commit & push them to your forked repo:
 
 ```
 git commit -m "submission"
