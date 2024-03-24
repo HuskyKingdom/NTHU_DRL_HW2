@@ -12,7 +12,7 @@ Due: 2022/04/09 (Tue.) 23:59
 
 <img src="https://raw.githubusercontent.com/Talendar/flappy-bird-gym/main/imgs/blue_bird_playing.gif" height=450>
 
-Leaderboard Link: [www.google.com](www.google.com)
+Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.aseart.com/s/FOB2023/deep)
 
 </div>
 
@@ -68,8 +68,8 @@ Pushing to the repo will trigger the following procedure:
 1. Creating virtual env
 2. installing dependencies
 3. Check your submission
-4. Run your code and return a score if checking succeed
-5. Push the socre to the leaderboard
+4. Run your code and return a score if checking succeed and Push the socre to the leaderboard
+
 
 This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below [Top left near "submission" in the pic.] then in the pop-up window clike "details", if the any of above workflow fails, you could view details in it.
 

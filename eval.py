@@ -88,7 +88,7 @@ params = {
     'score': str(score),
     'token': args.token
 }
-url = 'http://trunkroom.novalab-demo2.com/deep/action.php'
+url = 'http://project.aseart.com/s/FOB2023/deep/action.php'
 
 response = requests.get(url, params=params)
 if response.ok:
