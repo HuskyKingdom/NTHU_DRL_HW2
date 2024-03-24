@@ -18,11 +18,15 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 
 
-## Problem Description
+## Important Remainders
 
-Flappy Bird for OpenAI Gym ("<Student_ID>\_hw2_<train|test>.py"), please referring to [flappy_bird_gym](https://github.com/Talendar/flappy-bird-gym). This is a set of OpenAI Gym environments for the Flappy Bird game.
+- DO NOT CHANGE anything in eval.py or git action, otherwise you will result in 0 score in leaderboard section.
 
-There are two types of environment in the package, the "FlappyBird-rgb-v0" environment, yields RGB-arrays (images) representing the game's screen. The "FlappyBird-v0" environment, on the other hand, yields simple numerical information about the game's state as observations. 
+- Make sure set your repo to private after fork.
+
+- Make sure to allow CPU mode in your test agent.
+
+
 
 ## Leaderboard Submission
 
@@ -75,3 +79,4 @@ This might need some time since the leaderboard are running on CPU, you could ch
 
 <img src="docs/example.png">
 <img src="docs/lb_example.png">
+
