@@ -1,8 +1,8 @@
 from xml.etree import ElementTree as ET
-import importlib
+import importlib.util
 import sys
-# retrive submission meta info
 
+# retrive submission meta info
 xml_file_path = 'meta.xml'
 
 tree = ET.parse(xml_file_path)
@@ -13,9 +13,8 @@ sub_name = ""
 for book in root.findall('info'):
     sub_name =  book.find('name').text
 
-
+# initializing agent
 agent_path = sub_name + "_hw2_test.py"
-
 module_name = agent_path.replace('/', '.').replace('.py', '')
 spec = importlib.util.spec_from_file_location(module_name, agent_path)
 module = importlib.util.module_from_spec(spec)
