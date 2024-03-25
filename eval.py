@@ -78,7 +78,7 @@ for episode in tqdm(range(100), desc="Evaluating"):
 
 env.close()
 
-score = total_reward / 100
+score = total_reward / 50
 print(f"Final Score: {score}")
 
 # push to leaderboard
