@@ -59,7 +59,7 @@ total_time = 0
 agent = Agent()
 time_limit = 120
 
-for episode in tqdm(range(100), desc="Evaluating"):
+for episode in tqdm(range(50), desc="Evaluating"):
     obs = env.reset()
     start_time = time.time()
     episode_reward = 0
@@ -83,7 +83,7 @@ for episode in tqdm(range(100), desc="Evaluating"):
 
 env.close()
 
-score = total_reward / 100
+score = total_reward / 50
 print(f"Final Score: {score}")
 
 # push to leaderboard

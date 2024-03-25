@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
 
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +22,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: 2. Installing dependencies
       run: |
-        python -m pip install --upgrade pip && pip install setuptools==65.5.0 pip==21  && pip install wheel==0.38.0 && pip install flappy-bird-gym 
+        pip install gym==0.23.1 && pip install gym-super-mario-bros
         pip install -r requirements.txt
     - name: 4. Running your code & Pushing to Leaderboard
       run: python eval.py --token a91aae52cff9ef65932db06b150ffd47
