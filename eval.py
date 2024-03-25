@@ -14,7 +14,7 @@ env = JoypadSpace(env, SIMPLE_MOVEMENT)
 
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="Road Making System")
+    parser = argparse.ArgumentParser(description="Mario")
 
     parser.add_argument(
         "--token",

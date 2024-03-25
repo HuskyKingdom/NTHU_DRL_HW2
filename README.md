@@ -10,7 +10,7 @@ Due: 2022/04/09 (Tue.) 23:59
 
 
 
-<img src="https://raw.githubusercontent.com/Talendar/flappy-bird-gym/main/imgs/blue_bird_playing.gif" height=450>
+<img src="docs/mario.gif" height=350>
 
 Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.aseart.com/s/FOB2023/deep)
 
