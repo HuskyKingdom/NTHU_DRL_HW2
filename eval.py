@@ -5,6 +5,14 @@ import os
 import requests
 import argparse
 
+from nes_py.wrappers import JoypadSpace
+import gym_super_mario_bros
+from gym_super_mario_bros.actions import SIMPLE_MOVEMENT
+env = gym_super_mario_bros.make('SuperMarioBros-v0')
+env = JoypadSpace(env, SIMPLE_MOVEMENT)
+
+
+
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Road Making System")
 
@@ -44,13 +52,10 @@ os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 # evaluating
 import time
-import flappy_bird_gym
 from tqdm import tqdm
 
 total_reward = 0
 total_time = 0
-env = flappy_bird_gym.make("FlappyBird-rgb-v0")
-obs = env.reset()
 agent = Agent()
 time_limit = 120
 
