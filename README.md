@@ -28,7 +28,7 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 - Please conisder submit to leaderboard ASAP and make improvements later, since the leaderboard would record the time of submission histories of each ID, and this might take into account when calculating the overall ranking score.
 
-- You dont need to create any pull request now, simply following the instructions shown in below.
+- You dont need to create any pull request now, simply push to your own repo, for the details please follow the instructions shown in below.
 
 
 
