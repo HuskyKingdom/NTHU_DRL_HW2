@@ -4,7 +4,7 @@
   <h1 align="center">Leaderboard Submission Guide</h1>
   <h3 align="center">Deep Reinforcement Learning Class 2024 Programming Homework 2 | National Tsing Hua University</h3>
 
-Due: 2022/04/09 (Tue.) 23:59
+Due: 2024/04/09 (Tue.) 23:59
 
   <p align="center" >
 
@@ -22,11 +22,11 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 - DO NOT CHANGE anything in eval.py or git action, otherwise you will result in 0 score in leaderboard section.
 
-- Make sure set your repo to private after fork.
-
 - Make sure to allow CPU mode in your test agent.
 
 - Make sure you pass checker.py checking before submitting to leaderboard.
+
+- Please conisder submit to leaderboard ASAP and make improvements later, since the leaderboard would record the time of submission histories of each ID, and this might take into account when calculating the overall ranking score.
 
 
 
@@ -34,7 +34,10 @@ Leaderboard Link: [http://project.aseart.com/s/FOB2023/deep](http://project.asea
 
 We provide a leaderboard for you to compare with your classmate, the ranking of which will be a significant reference of your overall score based on your relative ranking position.  
 
-To submit your code to leaderboard, you will need to first **fork this repo**.
+To submit your code to leaderboard, you will need to first **fork this repo**. Then in your forked repo, enter `Actions` tag, and click `I understand my workflows, go ahead and enable them`:
+
+<img src="docs/action.png">
+
 
 Then clone it to your local environment:
 
@@ -52,7 +55,7 @@ Now replace `112062892_hw2_test.py` and `112062892_hw2_data.py` in the repo with
 
 If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
 
-Then change the name in `meta.xml` to your **STUDENT ID** for the submission. Note that if you submit to leaderboard multiple times when you improved the agent, simply use the same name and the result will be updated.
+Then change the name in `meta.xml` to your **STUDENT ID** for the submission. Note that if you submit to leaderboard multiple times when you improved the agent, simply use the same name and the result will be updated. Please make sure the id here consistents with the id shows on the name of your test file.
 
 ```
 <?xml version="1.0"?>
@@ -66,6 +69,7 @@ Then change the name in `meta.xml` to your **STUDENT ID** for the submission. No
 Once you are happy with above, commit & push them to your forked repo:
 
 ```
+git add .
 git commit -m "submission"
 git push
 ```
@@ -74,8 +78,7 @@ Pushing to the repo will trigger the following procedure:
 
 1. Creating virtual env
 2. installing dependencies
-3. Check your submission
-4. Run your code and return a score if checking succeed and Push the socre to the leaderboard
+3. Run your code and return a score if checking succeed and Push the socre to the leaderboard
 
 
 This might need some time since the leaderboard are running on CPU, you could check the progress of it by clicking the orange dot showing in below [Top left near "submission" in the pic.] then in the pop-up window clike "details", if the any of above workflow fails, you could view details in it.
