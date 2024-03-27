@@ -52,7 +52,7 @@ Now replace `112062892_hw2_test.py` and `112062892_hw2_data.py` in the repo with
 - Python 3.7
 - tdqm
 - requests
-- flappy-bird-gym 
+- gym-super-mario-bros
 - torch (CPU)
 
 If you wish to add more dependencies inorder to run your code, please add them into `requirements.txt`, each raw for one dependency.
