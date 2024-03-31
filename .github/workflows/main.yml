@@ -2,14 +2,14 @@ name: Deep Reinforcement Learning Homework 2 Submission
 
 on:
   push:
-    branches: [ main ]
+    branches: main
     paths:
       - '*hw2_test.py'
       - '*hw2_data'
       - 'meta.xml'
       - 'requirements.txt'
   pull_request:
-    branches: [ main ]
+    branches: main
     paths:
       - '*hw2_test.py'
       - '*hw2_data'
@@ -28,8 +28,8 @@ jobs:
         python-version: 3.8
     - name: 2. Installing dependencies
       run: |
-        pip install gym==0.23.1 && pip install gym-super-mario-bros
+        pip install gym==0.23.1 gym-super-mario-bros
         pip install -r requirements.txt
-    - name: 4. Running your code & Pushing to Leaderboard
+    - name: 3. Running your code & Pushing to Leaderboard
       run: python eval.py --token a91aae52cff9ef65932db06b150ffd47
 
