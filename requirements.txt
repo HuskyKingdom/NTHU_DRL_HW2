@@ -1,4 +1,11 @@
-torch
-tqdm
+gym==0.23.1
+gym-super-mario-bros
+matplotlib
+numpy
+opencv-python
 requests
 argparse
+tdqm
+torch
+torchvision
+tqdm
