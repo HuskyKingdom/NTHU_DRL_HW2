@@ -23,7 +23,7 @@ from mario import MarioDDQN
 
 warnings.filterwarnings("ignore", message=".*SuperMarioBros.*-v0.*")
 
-checkpoisnts_dir = script_dir / "checkpoints"
+checkpoisnts_dir = script_dir / "checkpoints_202404050135"
 
 
 def get_initial_stage_frames():
@@ -44,22 +44,21 @@ def get_initial_stage_frames():
 
 class Agent:
     obs_dim = (240, 256, 3)
-    action_dim = 12
+    action_dim = 7
     n_frames_skip = 4
     n_stacks = 4
     shape = (84, 84)
+    epsilon = 0.05
 
     def __init__(self):
         self.step_count = 0
         self.current_action = 0
         self.frames = deque(maxlen=self.n_stacks)
         self.initial_state_frames = get_initial_stage_frames()
-        self.net = MarioDDQN(
-            (self.n_stacks, *self.shape), self.action_dim, 384
-        ).float()
+        self.net = MarioDDQN(self.action_dim, 392).float()
 
         try:
-            self.load(script_dir / "data")
+            self.load(checkpoisnts_dir / "ddqn_rmsprop_mse_10M_decay_7.chkpt")
         except ValueError:
             self.load(script_dir / "109061138_hw2_data")
 
@@ -75,7 +74,7 @@ class Agent:
         else:
             self.frames.append(observation)
 
-        if np.random.rand() < 0.1:
+        if np.random.rand() < self.epsilon:
             self.current_action = np.random.randint(self.action_dim)
         else:
             obs_stack = self.get_observation()
@@ -92,7 +91,8 @@ class Agent:
         )
 
         for i, raw_frame in enumerate(self.frames):
-            gray_frame = cv2.cvtColor(raw_frame, cv2.COLOR_RGB2GRAY)
+            cropped_frame = raw_frame[32:, :, :]
+            gray_frame = cv2.cvtColor(cropped_frame, cv2.COLOR_RGB2GRAY)
             processed_frames[i] = cv2.resize(gray_frame, self.shape)
 
         return processed_frames

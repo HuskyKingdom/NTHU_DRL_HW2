@@ -9,16 +9,10 @@ class MarioDDQN(nn.Module):
 
     def __init__(
         self,
-        input_dim: Tuple[int, int, int],
         output_dim: int,
         hidden_dim: int = 392,
     ):
         super().__init__()
-        assert (
-            input_dim[0] == 4 and input_dim[1] == 84 and input_dim[2] == 84
-        ), f"Expected input_dim to be (4, 84, 84), got {input_dim}"
-
-        self.input_dim = input_dim
         self.hidden_dim = hidden_dim
 
         self.cnns = self.__build_cnns()

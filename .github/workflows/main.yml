@@ -2,14 +2,12 @@ name: Deep Reinforcement Learning Homework 2 Submission
 
 on:
   push:
-    branches: main
     paths:
       - '*hw2_test.py'
       - '*hw2_data'
       - 'meta.xml'
       - 'requirements.txt'
   pull_request:
-    branches: main
     paths:
       - '*hw2_test.py'
       - '*hw2_data'
